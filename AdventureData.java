@@ -270,9 +270,46 @@ public class AdventureData {
                     new SimpleEntry<>(
                         "I've got evidence for you.",
                         new DialogNode("Well what are you waiting for? Give it to me.")
-                    )
+                    ),
+										new SimpleEntry<>(
+				                "Here, look at this Red Marker",
+				                new DialogNode(
+				                		"Huh? What good is this?",
+						                null,
+						                new ArrayList<>(),
+						                List.of(redMarker)
+				                )
+		                ),
+										new SimpleEntry<>(
+				                "Here, look at this Red Marker",
+				                new DialogNode(
+				                		"Well now I’m just hungry.",
+						                null,
+						                new ArrayList<>(),
+						                List.of(receiptOfTotalSale)
+				                )
+		                ),
+											new SimpleEntry<>(
+				                "Here, look at this Recounted Testimony",
+				                new DialogNode(
+				                		"...",
+						                null,
+						                new ArrayList<>(),
+						                List.of(recountedTestimony)
+				                )
+		                ),
+											new SimpleEntry<>(
+				                "Here, look at this Security Tape",
+				                new DialogNode(
+				                		"Well you certainly look… taller in person.",
+						                null,
+						                new ArrayList<>(),
+						                List.of(securityTape)
+				                )
+		                )
+										
 
-
+										//GAME WIN HERE!!
                     //<--------------Work on the give!!-------------------->
                 )
             )
