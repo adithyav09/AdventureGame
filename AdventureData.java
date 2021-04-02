@@ -115,6 +115,7 @@ public class AdventureData {
         "A bright red marker, just like the one used for the crime.");
     Item receiptOfTotalSale = new Item("Receipt of Total Sale",
         "Shows proof that Glenda has been doing considerably well since the incident.");
+		Item cookie = new Item("Cookie", "A delicious cookie from Glenda.");
 
     // Characters
     Character steveSminkle = new Character("Steve Sminkle",
@@ -182,6 +183,27 @@ public class AdventureData {
 						                new ArrayList<>(),
 						                List.of(redMarker)
 				                )
+		                ),
+										new SimpleEntry<>(
+				                "Here, look at this Receipt of Total Sale",
+				                new DialogNode(
+				                		"Holy cow! I had no idea cookies could be so profitable! No wonder she sets the cookie" 
+														+ "stall right next to the panther! But this definitely isn’t incriminating by itself.",
+						                null,
+						                new ArrayList<>(),
+						                List.of(receiptOfTotalSale)
+				                )
+		                ),
+										new SimpleEntry<>(
+				                "Here, look at this Red Marker and Receipt of Total Sale",
+				                new DialogNode(
+				                		"I see… so Glenda did this to attract business? Geez I wonder why a 9-year-old is so obsessed with entrepreneurship" 
+														+"anyways. Well, this is definitely enough to convince me.",
+						                null,
+						                new ArrayList<>(),
+						                List.of(redMarker, receiptOfTotalSale),
+														recountedTestimony
+				                )
 		                )
                 )
             )
@@ -211,19 +233,19 @@ public class AdventureData {
                             "Glenda brightens up and proudly proclaims, \"Business has been great! It’s really been booming since this morning. You know, cause like, the panther and all. People are really fascinated.\"",
                             new ArrayList<>(
                                 List.of(
-
-
                                     //<--------------Work on the obtains!!-------------------->
 
                                     new SimpleEntry<>(
                                         "I’ve got some free time if you need any help with anything.",
                                         new DialogNode(
-                                            "\"That would be great! I’ve been swamped with all the business, but I want to be MORE swamped! Could you make some flyers for me? I’d really appreciate it.\"")
+                                            "\"That would be great! I’ve been swamped with all the business, but I want to be MORE swamped! Could you make some flyers for me? I’d really appreciate it.\"") 
+																						// null, new ArrayList<>(), List.of(null), List.of(redMarker, cookie))
                                     ),
                                     new SimpleEntry<>(
                                         "How would you like to be nominated for the annual uh… 9-year-olds of entrepreneurial excellence award?",
                                         new DialogNode(
-                                            "\"Oh boy would I!!\" You sneakily tell Glenda you’ll need proof of all the incredible sales she’s been making. She happily reaches into her little makeshift register and pulls out the Receipt of Total Sale.")
+                                            "\"Oh boy would I!!\" You sneakily tell Glenda you’ll need proof of all the incredible sales she’s been making. She happily reaches into her little makeshift register and pulls out the Receipt of Total Sale.") 
+																						// null, new ArrayList<>(), null, List.of(redMarker, cookies, receiptOfTotalSale))
                                     )
                                 )
                             )
@@ -267,7 +289,6 @@ public class AdventureData {
                     new SimpleEntry<>(
                         "No no, what can I do for YOU?",
                         new DialogNode("\"Well, I am pretty hungry. Some of those girl scout cookies would really hit the spot. If you can grab some for me, I can give you these keys I found on the ground. I don’t know what they go to so they’re essentially useless but hey, seems fair to me.\"")
-
                     ),
                     new SimpleEntry<>(
                         "You sure you wouldn’t rather go by your name?",
